@@ -26,4 +26,8 @@ public class Maintenance {
     private LocalDate dateFin;
 
     private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_vehicule")
+    private Vehicule vehicule;
 }
